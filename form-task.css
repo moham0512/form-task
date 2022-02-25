@@ -1,0 +1,102 @@
+@font-face {
+    src: url('/fonts/ir_sans.ttf');
+    font-family: 'iransans';
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    direction: rtl;
+    font-family: iransans;
+    font-size: 16px;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+#main {
+    width: 450px;
+    margin: 100px auto;
+    background-color: rgba(19, 35, 47, 0.9);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#topButton {
+    padding-right: 55px;
+}
+
+#main li a {
+    background-color: rgba(160, 179, 176, 0.25);
+    float: right;
+    width: 150px;
+    padding: 8px 10px;
+    margin: 15px 0;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+#main li a:hover {
+    background-color: rgba(26, 177, 136, 0.8);
+}
+
+#topButton::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#main ::placeholder {
+    color: #ccc;
+    opacity: 0.6;
+}
+
+#main h2 {
+    color: white;
+    margin: 20px;
+}
+
+#main input {
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 20px 5px;
+    width: 90%;
+}
+
+#signup input[type="text"] {
+    width: calc(45% - 8px);
+}
+
+#signup button,
+#login button {
+    background-color: #1ab188;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.bck-green {
+    background-color: #1ab188 !important;
+}

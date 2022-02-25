@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="form-task.css" rel="stylesheet" type="text/css" />
+    <title>Login Form</title>
+
+    <script src="form-task.js"></script>
+
+</head>
+
+<body>
+
+    <div id="main">
+        <ul id="topButton">
+            <li><a href="#" class="signup">صفحه ثبت نام</a></li>
+            <li><a href="#" class="login">صفحه ورود</a></li>
+        </ul>
+
+
+        <div id="signup">
+            <form method="get" action="">
+                <h2>ثبت نام</h2>
+                <input type="text" name="firstName" placeholder="نام" required/>
+                <input type="text" name="lastname" placeholder="نام خانوادگی" required /><br/>
+                <input type="email" name="email" placeholder="آدرس ایمیل" required /><br/>
+                <input type="password" name="pass" autocomplete="off" required placeholder="کلمه عبور" />
+                <button type="submit">ثبت نام</button>
+            </form>
+        </div>
+        <div id="login">
+            <form action="" method="get">
+                <h2>ورود</h2>
+                <input type="email" name="email" placeholder="آدرس ایمیل" required/><br/>
+                <input type="password" name="pass" autocomplete="off" required placeholder="کلمه عبور" />
+                <button type="submit">ورود</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
