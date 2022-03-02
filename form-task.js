@@ -24,6 +24,15 @@ function onLoad() {
         loginButton.classList.add('bck-green');
         signupButton.classList.remove('bck-green');
     }
+
+    // validation forms
+
+    const signupSubmit = document.querySelector('#signup button[type="submit"]');
+    const loginSubmit = document.querySelector('#login button[type="submit"]');
+
+    signupSubmit.addEventListener('click' , function(){
+        
+    });
 }
 
 document.addEventListener('DOMContentLoaded', onLoad);

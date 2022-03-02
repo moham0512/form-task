@@ -1,5 +1,5 @@
 @font-face {
-    src: url('/fonts/ir_sans.ttf');
+    src: url('fonts/ir_sans.ttf');
     font-family: 'iransans';
     font-weight: normal;
     font-style: normal;
@@ -91,6 +91,13 @@ textarea {
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 15px;
+}
+
+.alt-message{
+    padding-right: 30px;
+    text-align: right;
+    color: red;
+    line-height: 200%;
 }
 
 .hidden {
