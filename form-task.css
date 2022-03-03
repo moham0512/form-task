@@ -15,6 +15,7 @@ body {
     direction: rtl;
     font-family: iransans;
     font-size: 16px;
+    background-color: #ddd;
 }
 
 input,
@@ -23,16 +24,17 @@ select,
 textarea {
     font-family: inherit;
     font-size: inherit;
-    background-color: transparent;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
 }
 
 #main {
     width: 450px;
     margin: 100px auto;
-    background-color: rgba(19, 35, 47, 0.9);
+    background-color: #f7f7f7;
     border-radius: 5px;
+    box-shadow: 0 0 5px #666;
     overflow: hidden;
     text-align: center;
 }
@@ -42,18 +44,18 @@ textarea {
 }
 
 #main li a {
-    background-color: rgba(160, 179, 176, 0.25);
+    background-color: #D9D7F1;
     float: right;
     width: 150px;
     padding: 8px 10px;
     margin: 15px 0;
     text-decoration: none;
-    color: white;
+    color: #aaa;
     transition: 0.3s;
 }
 
 #main li a:hover {
-    background-color: rgba(26, 177, 136, 0.8);
+    background-color: rgba(83, 62, 133 , 0.7);
 }
 
 #topButton::after {
@@ -63,12 +65,12 @@ textarea {
 }
 
 #main ::placeholder {
-    color: #ccc;
-    opacity: 0.6;
+    color: #999;
+    /* opacity: ; */
 }
 
 #main h2 {
-    color: white;
+    color: #555;
     margin: 20px;
 }
 
@@ -79,6 +81,7 @@ textarea {
     padding: 10px 10px;
     margin: 20px 5px;
     width: 90%;
+    box-shadow: 0 0 3px #888 inset;
 }
 
 #signup input[type="text"] {
@@ -87,16 +90,18 @@ textarea {
 
 #signup button,
 #login button {
-    background-color: #1ab188;
+    background-color: #533E85;
+    color: #ddd;
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
 .alt-message{
-    padding-right: 30px;
-    text-align: right;
+    padding: 0 30px;
+    text-align: justify;
     color: red;
+    font-size: 12px;
     line-height: 200%;
 }
 
@@ -105,5 +110,5 @@ textarea {
 }
 
 .bck-green {
-    background-color: #1ab188 !important;
+    background-color: #533E85 !important;
 }

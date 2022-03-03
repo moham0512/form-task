@@ -27,11 +27,49 @@ function onLoad() {
 
     // validation forms
 
-    const signupSubmit = document.querySelector('#signup button[type="submit"]');
-    const loginSubmit = document.querySelector('#login button[type="submit"]');
+    const signupForm = document.querySelector('#signup form');
+    const loginForm = document.querySelector('#login form');
 
-    signupSubmit.addEventListener('click' , function(){
-        
+    let validateName = /^[a-z ,.'-]+$/i;
+    // let validateUser = /^[a-zA-Z\-]+$/;
+    let validatePass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    let validateEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    
+    const signupFN = document.querySelector('#signup input[name="firstName"]');
+    const signupLN = document.querySelector('#signup input[name="lastName"]');
+    const signupEmail = document.querySelector('#signup input[type="email"]');
+    const signupPass = document.querySelector('#signup input[type="password"]');
+    const signupMessage = document.querySelector('#signup .alt-message');
+
+
+    signupForm.addEventListener('submit' , function(event){
+        if(signupFN.value.length < 5){
+            signupMessage.textContent = `* نام وارد شده درست نیست!`;
+            event.preventDefault();
+        }else if(signupLN.value.length < 5){
+            signupMessage.textContent = `* نام خانوادگی وارد شده درست نیست!`;
+            event.preventDefault();
+        }else if(!validateEmail.test(signupEmail.value)){
+            signupMessage.textContent = `* لطفا یک ایمیل معتبر وارد کنید!`;
+            event.preventDefault();
+        }else if(!validatePass.test(signupPass.value)){
+            signupMessage.textContent = `* رمز عبور وارد شده باید شامل حداقل یک حرف بزرگ ، یک کاراکتر خاص و اعداد و حروف باشد!`;
+            event.preventDefault();
+        }
+    });
+
+    const loginEmail = document.querySelector('#login input[type="email"]');
+    const loginPass = document.querySelector('#login input[type="password"]');
+    const loginMessage = document.querySelector('#login .alt-message');
+
+    loginForm.addEventListener('submit' , function(event){
+        if(!validateEmail.test(loginEmail.value)){
+            loginMessage.textContent = `* ایمیل وارد شده معتبر نمی باشد!`;
+            event.preventDefault();
+        }else if(!validatePass.test(loginPass.value)){
+            loginMessage.textContent = `* کلمه عبور وارد شده معتبر نمی باشد!`;
+            event.preventDefault();
+        }
     });
 }
 

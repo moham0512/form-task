@@ -24,8 +24,8 @@
             <form method="get" action="">
                 <h2>ثبت نام</h2>
                 <input type="text" name="firstName" placeholder="نام" required/>
-                <input type="text" name="lastname" placeholder="نام خانوادگی" required /><br/>
-                <input type="email" name="email" placeholder="آدرس ایمیل" required /><br/>
+                <input type="text" name="lastName" placeholder="نام خانوادگی" required /><br/>
+                <input type="email" name="email" autocomplete="off" placeholder="آدرس ایمیل" required /><br/>
                 <input type="password" name="pass" autocomplete="off" required placeholder="کلمه عبور" />
                 <p class="alt-message"></p><br/>
                 <button type="submit">ثبت نام</button>
@@ -34,7 +34,7 @@
         <div id="login">
             <form action="" method="get">
                 <h2>ورود</h2>
-                <input type="email" name="email" placeholder="آدرس ایمیل" required/><br/>
+                <input type="email" name="email" autocomplete="off" placeholder="آدرس ایمیل" required/><br/>
                 <input type="password" name="pass" autocomplete="off" required placeholder="کلمه عبور" />
                 <p class="alt-message"></p><br/>
                 <button type="submit">ورود</button>
